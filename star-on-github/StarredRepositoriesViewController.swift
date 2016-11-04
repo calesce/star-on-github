@@ -13,6 +13,7 @@ let reuseIdentifier = "repositoryView"
 class StarredRepositoriesViewController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var repositoriesCollectionView: UICollectionView!
+    var isFirstViewController: Bool = false
     var token: String?
     var authorizationId: Int?
     var repositories: [Repository] = []
@@ -42,7 +43,15 @@ class StarredRepositoriesViewController: UIViewController, UICollectionViewDataS
         GithubNetworking.logout(token: self.token ?? "") {
             success in
             DispatchQueue.main.async {
-                self.navigationController?.dismiss(animated: true, completion: nil)
+                if self.isFirstViewController {
+                    self.isFirstViewController = false
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let loginViewController = storyboard.instantiateViewController(withIdentifier: "login")
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    appDelegate.window?.rootViewController = loginViewController
+                } else {
+                    self.navigationController?.dismiss(animated: true, completion: nil)
+                }
             }
         }
     }

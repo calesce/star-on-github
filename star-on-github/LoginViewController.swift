@@ -29,15 +29,6 @@ class LoginViewController: UIViewController {
         
         self.token = token
         self.authorizationId = UserDefaults.standard.integer(forKey: AUTHORIZATION_ID_KEY)
-
-        GithubNetworking.checkAuthentication(token: token) {
-            authenticated in
-            DispatchQueue.main.async {
-                if authenticated {
-                    self.performSegue(withIdentifier: "loginSegue", sender: self)
-                }
-            }
-        }
         
         super.viewDidLoad()
     }

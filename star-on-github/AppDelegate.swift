@@ -15,7 +15,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var authenticated: Bool = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if let token = UserDefaults.standard.string(forKey: ACCESS_TOKEN_KEY),
+            let navController = storyboard.instantiateViewController(withIdentifier: "navRoot") as? UINavigationController,
+            let starredRepositoriesVc = navController.viewControllers.first as? StarredRepositoriesViewController {
+                starredRepositoriesVc.token = token
+                starredRepositoriesVc.authorizationId = UserDefaults.standard.integer(forKey: AUTHORIZATION_ID_KEY)
+            starredRepositoriesVc.isFirstViewController = true
+            
+            self.window?.rootViewController = navController
+            self.window?.makeKeyAndVisible()
+        } else {
+            let viewController = storyboard.instantiateViewController(withIdentifier: "login")
+            self.window?.rootViewController = viewController
+            self.window?.makeKeyAndVisible()
+        }
+        
         return true
     }
 

@@ -119,6 +119,7 @@ class GithubNetworking {
             }
             UserDefaults.standard.removeObject(forKey: AUTHORIZATION_ID_KEY)
             UserDefaults.standard.removeObject(forKey: ACCESS_TOKEN_KEY)
+            UserDefaults.standard.removeObject(forKey: FINGERPRINT_KEY)
             return completion(resp.statusCode == 204)
         }
         
