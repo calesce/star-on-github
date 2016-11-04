@@ -35,7 +35,18 @@ class StarredRepositoriesViewController: UIViewController, UICollectionViewDataS
             }
         }
         
+        let coolColor = UIColor(red: 21.0 / 255, green: 67.0 / 255, blue: 92.0 / 255, alpha: 1)
+        if let navigationBar = self.navigationController?.navigationBar {
+            navigationBar.barTintColor = coolColor
+            navigationBar.isTranslucent = false
+            navigationBar.barStyle = UIBarStyle.black
+            navigationBar.tintColor = UIColor.white
+        }
+       
+        
         let logoutButton = UIBarButtonItem(title: "Log out", style: .plain, target: self, action: #selector(logout))
+        logoutButton.tintColor = UIColor.white
+        
         self.navigationItem.rightBarButtonItem = logoutButton
     }
     

@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.tintColor = UIColor.white
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         if let token = UserDefaults.standard.string(forKey: ACCESS_TOKEN_KEY),
