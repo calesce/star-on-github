@@ -11,5 +11,7 @@ import UIKit
 class GithubRepositoryCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ownerLabel: UILabel!
+    @IBOutlet weak var languageLabel: UILabel!
+    @IBOutlet weak var languageColor: LanguageCircle!
     @IBOutlet weak var starCountLabel: UILabel!
 }
