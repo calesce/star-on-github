@@ -83,8 +83,8 @@ extension StarredRepositoriesViewController {
         
         cell.nameLabel.text = repository.name
         cell.ownerLabel.text = "by \(repository.owner)"
-        cell.languageLabel.text = "\(repository.language)"
-        cell.starCountLabel.text = "\(repository.stargazers) stars"
+        cell.languageLabel.text = repository.language.rawValue
+        cell.starCountLabel.text = repository.stargazers == 1 ? "1 star" : "\(repository.stargazers) stars"
         
         cell.languageColor.fillColor = hexToUIColor(hex: repository.language.hexCode)
         cell.languageColor.setNeedsDisplay()

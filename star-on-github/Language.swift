@@ -24,6 +24,8 @@ enum Language: String {
     case Shell = "Shell"
     case CSharp = "C#"
     case Go = "Go"
+    case EmacsLisp = "Emacs Lisp"
+    case ObjectiveC = "Objective-C"
     case None
     
     // https://github.com/ozh/github-colors/blob/master/colors.json
@@ -57,6 +59,10 @@ enum Language: String {
             return "#178600"
         case .Go:
             return "#375eab"
+        case .EmacsLisp:
+            return "#c065db"
+        case .ObjectiveC:
+            return "#438eff"
         case .None:
             return "#d3d3d3"
         }

@@ -16,6 +16,7 @@
 		B064EB351DCD1EC4009284AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B064EB341DCD1EC4009284AE /* Main.storyboard */; };
 		B064EB371DCD3CB3009284AE /* GithubRepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064EB361DCD3CB3009284AE /* GithubRepositoryCell.swift */; };
 		B08296721DD1202E00470DD5 /* LanguageCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08296711DD1202E00470DD5 /* LanguageCircle.swift */; };
+		B08296741DD127E900470DD5 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08296731DD127E900470DD5 /* Logo.swift */; };
 		B092D63B1DC7B5C2005AF3CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092D63A1DC7B5C2005AF3CB /* AppDelegate.swift */; };
 		B092D63D1DC7B5C2005AF3CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092D63C1DC7B5C2005AF3CB /* LoginViewController.swift */; };
 		B092D6421DC7B5C2005AF3CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B092D6411DC7B5C2005AF3CB /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		B064EB341DCD1EC4009284AE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B064EB361DCD3CB3009284AE /* GithubRepositoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRepositoryCell.swift; sourceTree = "<group>"; };
 		B08296711DD1202E00470DD5 /* LanguageCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageCircle.swift; sourceTree = "<group>"; };
+		B08296731DD127E900470DD5 /* Logo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		B092D6371DC7B5C2005AF3CB /* star-on-github.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "star-on-github.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B092D63A1DC7B5C2005AF3CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B092D63C1DC7B5C2005AF3CB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			children = (
 				B092D63A1DC7B5C2005AF3CB /* AppDelegate.swift */,
 				B038ABDC1DC8DA10006D9921 /* StarredRepositoriesViewController.swift */,
+				B08296731DD127E900470DD5 /* Logo.swift */,
 				B08296711DD1202E00470DD5 /* LanguageCircle.swift */,
 				B064EB361DCD3CB3009284AE /* GithubRepositoryCell.swift */,
 				B038ABDE1DC8E496006D9921 /* Repository.swift */,
@@ -168,6 +171,7 @@
 				B038ABE11DC91BC7006D9921 /* Language.swift in Sources */,
 				B064EB2F1DCCD7D0009284AE /* GithubNetworking.swift in Sources */,
 				B092D63D1DC7B5C2005AF3CB /* LoginViewController.swift in Sources */,
+				B08296741DD127E900470DD5 /* Logo.swift in Sources */,
 				B064EB311DCD0838009284AE /* Keychain.swift in Sources */,
 				B092D63B1DC7B5C2005AF3CB /* AppDelegate.swift in Sources */,
 				B038ABDF1DC8E496006D9921 /* Repository.swift in Sources */,
