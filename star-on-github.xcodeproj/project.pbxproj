@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B02B28A71DD25C280025610F /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02B28A61DD25C280025610F /* ShareViewController.swift */; };
+		B02B28AA1DD25C280025610F /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B02B28A81DD25C280025610F /* MainInterface.storyboard */; };
+		B02B28AE1DD25C280025610F /* share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B02B28A41DD25C280025610F /* share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B038ABDD1DC8DA10006D9921 /* StarredRepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038ABDC1DC8DA10006D9921 /* StarredRepositoriesViewController.swift */; };
 		B038ABDF1DC8E496006D9921 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038ABDE1DC8E496006D9921 /* Repository.swift */; };
 		B038ABE11DC91BC7006D9921 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038ABE01DC91BC7006D9921 /* Language.swift */; };
@@ -23,7 +26,35 @@
 		B092D6451DC7B5C2005AF3CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B092D6431DC7B5C2005AF3CB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B02B28AC1DD25C280025610F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B092D62F1DC7B5C2005AF3CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B02B28A31DD25C280025610F;
+			remoteInfo = share;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B02B28B21DD25C280025610F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B02B28AE1DD25C280025610F /* share.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B02B28A41DD25C280025610F /* share.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = share.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B02B28A61DD25C280025610F /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		B02B28A91DD25C280025610F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		B02B28AB1DD25C280025610F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B038ABDC1DC8DA10006D9921 /* StarredRepositoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarredRepositoriesViewController.swift; sourceTree = "<group>"; };
 		B038ABDE1DC8E496006D9921 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		B038ABE01DC91BC7006D9921 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
@@ -43,6 +74,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B02B28A11DD25C280025610F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B092D6341DC7B5C2005AF3CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,10 +91,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B02B28A51DD25C280025610F /* share */ = {
+			isa = PBXGroup;
+			children = (
+				B02B28A61DD25C280025610F /* ShareViewController.swift */,
+				B02B28A81DD25C280025610F /* MainInterface.storyboard */,
+				B02B28AB1DD25C280025610F /* Info.plist */,
+			);
+			path = share;
+			sourceTree = "<group>";
+		};
 		B092D62E1DC7B5C2005AF3CB = {
 			isa = PBXGroup;
 			children = (
 				B092D6391DC7B5C2005AF3CB /* star-on-github */,
+				B02B28A51DD25C280025610F /* share */,
 				B092D6381DC7B5C2005AF3CB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				B092D6371DC7B5C2005AF3CB /* star-on-github.app */,
+				B02B28A41DD25C280025610F /* share.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +144,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B02B28A31DD25C280025610F /* share */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B02B28B11DD25C280025610F /* Build configuration list for PBXNativeTarget "share" */;
+			buildPhases = (
+				B02B28A01DD25C280025610F /* Sources */,
+				B02B28A11DD25C280025610F /* Frameworks */,
+				B02B28A21DD25C280025610F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = share;
+			productName = share;
+			productReference = B02B28A41DD25C280025610F /* share.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		B092D6361DC7B5C2005AF3CB /* star-on-github */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B092D6491DC7B5C2005AF3CB /* Build configuration list for PBXNativeTarget "star-on-github" */;
@@ -101,10 +168,12 @@
 				B092D6331DC7B5C2005AF3CB /* Sources */,
 				B092D6341DC7B5C2005AF3CB /* Frameworks */,
 				B092D6351DC7B5C2005AF3CB /* Resources */,
+				B02B28B21DD25C280025610F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B02B28AD1DD25C280025610F /* PBXTargetDependency */,
 			);
 			name = "star-on-github";
 			productName = "star-on-github";
@@ -117,10 +186,15 @@
 		B092D62F1DC7B5C2005AF3CB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = newman.cale;
 				TargetAttributes = {
+					B02B28A31DD25C280025610F = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 2S6N6D8KFE;
+						ProvisioningStyle = Automatic;
+					};
 					B092D6361DC7B5C2005AF3CB = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 2S6N6D8KFE;
@@ -142,11 +216,20 @@
 			projectRoot = "";
 			targets = (
 				B092D6361DC7B5C2005AF3CB /* star-on-github */,
+				B02B28A31DD25C280025610F /* share */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B02B28A21DD25C280025610F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B02B28AA1DD25C280025610F /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B092D6351DC7B5C2005AF3CB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -161,6 +244,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B02B28A01DD25C280025610F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B02B28A71DD25C280025610F /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B092D6331DC7B5C2005AF3CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -180,7 +271,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B02B28AD1DD25C280025610F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B02B28A31DD25C280025610F /* share */;
+			targetProxy = B02B28AC1DD25C280025610F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		B02B28A81DD25C280025610F /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B02B28A91DD25C280025610F /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		B092D6431DC7B5C2005AF3CB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -192,6 +299,41 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B02B28AF1DD25C280025610F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = 2S6N6D8KFE;
+				INFOPLIST_FILE = share/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cale.star-on-github.share";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B02B28B01DD25C280025610F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = 2S6N6D8KFE;
+				INFOPLIST_FILE = share/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cale.star-on-github.share";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		B092D6471DC7B5C2005AF3CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -283,6 +425,7 @@
 		B092D64A1DC7B5C2005AF3CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2S6N6D8KFE;
 				INFOPLIST_FILE = "star-on-github/Info.plist";
@@ -296,6 +439,7 @@
 		B092D64B1DC7B5C2005AF3CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2S6N6D8KFE;
 				INFOPLIST_FILE = "star-on-github/Info.plist";
@@ -309,6 +453,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B02B28B11DD25C280025610F /* Build configuration list for PBXNativeTarget "share" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B02B28AF1DD25C280025610F /* Debug */,
+				B02B28B01DD25C280025610F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		B092D6321DC7B5C2005AF3CB /* Build configuration list for PBXProject "star-on-github" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
