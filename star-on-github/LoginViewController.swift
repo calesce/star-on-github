@@ -11,6 +11,7 @@ import UIKit
 let ACCESS_TOKEN_KEY = "accessToken"
 let AUTHORIZATION_ID_KEY = "authorizationId"
 let FINGERPRINT_KEY = "fingerprint"
+let APP_GROUP_NAME = "group.com.newman.cale.star"
 
 class LoginViewController: UIViewController {
 

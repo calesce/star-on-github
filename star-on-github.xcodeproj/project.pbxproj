@@ -10,12 +10,12 @@
 		B02B28A71DD25C280025610F /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02B28A61DD25C280025610F /* ShareViewController.swift */; };
 		B02B28AA1DD25C280025610F /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B02B28A81DD25C280025610F /* MainInterface.storyboard */; };
 		B02B28AE1DD25C280025610F /* share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B02B28A41DD25C280025610F /* share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B031C93B1DD40489000FAA1F /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = B031C93A1DD40489000FAA1F /* Secrets.plist */; };
 		B038ABDD1DC8DA10006D9921 /* StarredRepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038ABDC1DC8DA10006D9921 /* StarredRepositoriesViewController.swift */; };
 		B038ABDF1DC8E496006D9921 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038ABDE1DC8E496006D9921 /* Repository.swift */; };
 		B038ABE11DC91BC7006D9921 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038ABE01DC91BC7006D9921 /* Language.swift */; };
 		B064EB2F1DCCD7D0009284AE /* GithubNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064EB2E1DCCD7CF009284AE /* GithubNetworking.swift */; };
 		B064EB311DCD0838009284AE /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064EB301DCD0838009284AE /* Keychain.swift */; };
-		B064EB331DCD1105009284AE /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = B064EB321DCD1105009284AE /* Secrets.plist */; };
 		B064EB351DCD1EC4009284AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B064EB341DCD1EC4009284AE /* Main.storyboard */; };
 		B064EB371DCD3CB3009284AE /* GithubRepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064EB361DCD3CB3009284AE /* GithubRepositoryCell.swift */; };
 		B08296721DD1202E00470DD5 /* LanguageCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08296711DD1202E00470DD5 /* LanguageCircle.swift */; };
@@ -55,12 +55,14 @@
 		B02B28A61DD25C280025610F /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		B02B28A91DD25C280025610F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		B02B28AB1DD25C280025610F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B031C93A1DD40489000FAA1F /* Secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
+		B031C93C1DD7CFB7000FAA1F /* star-on-github.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "star-on-github.entitlements"; sourceTree = "<group>"; };
+		B031C93D1DD7D318000FAA1F /* share.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = share.entitlements; sourceTree = "<group>"; };
 		B038ABDC1DC8DA10006D9921 /* StarredRepositoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarredRepositoriesViewController.swift; sourceTree = "<group>"; };
 		B038ABDE1DC8E496006D9921 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		B038ABE01DC91BC7006D9921 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		B064EB2E1DCCD7CF009284AE /* GithubNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubNetworking.swift; sourceTree = "<group>"; };
 		B064EB301DCD0838009284AE /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
-		B064EB321DCD1105009284AE /* Secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		B064EB341DCD1EC4009284AE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B064EB361DCD3CB3009284AE /* GithubRepositoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRepositoryCell.swift; sourceTree = "<group>"; };
 		B08296711DD1202E00470DD5 /* LanguageCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageCircle.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		B02B28A51DD25C280025610F /* share */ = {
 			isa = PBXGroup;
 			children = (
+				B031C93D1DD7D318000FAA1F /* share.entitlements */,
 				B02B28A61DD25C280025610F /* ShareViewController.swift */,
 				B02B28A81DD25C280025610F /* MainInterface.storyboard */,
 				B02B28AB1DD25C280025610F /* Info.plist */,
@@ -122,6 +125,7 @@
 		B092D6391DC7B5C2005AF3CB /* star-on-github */ = {
 			isa = PBXGroup;
 			children = (
+				B031C93C1DD7CFB7000FAA1F /* star-on-github.entitlements */,
 				B092D63A1DC7B5C2005AF3CB /* AppDelegate.swift */,
 				B038ABDC1DC8DA10006D9921 /* StarredRepositoriesViewController.swift */,
 				B08296731DD127E900470DD5 /* Logo.swift */,
@@ -129,7 +133,7 @@
 				B064EB361DCD3CB3009284AE /* GithubRepositoryCell.swift */,
 				B038ABDE1DC8E496006D9921 /* Repository.swift */,
 				B064EB301DCD0838009284AE /* Keychain.swift */,
-				B064EB321DCD1105009284AE /* Secrets.plist */,
+				B031C93A1DD40489000FAA1F /* Secrets.plist */,
 				B038ABE01DC91BC7006D9921 /* Language.swift */,
 				B092D63C1DC7B5C2005AF3CB /* LoginViewController.swift */,
 				B064EB2E1DCCD7CF009284AE /* GithubNetworking.swift */,
@@ -192,13 +196,24 @@
 				TargetAttributes = {
 					B02B28A31DD25C280025610F = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 2S6N6D8KFE;
+						DevelopmentTeam = 5573CJTSA2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					B092D6361DC7B5C2005AF3CB = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = 2S6N6D8KFE;
+						DevelopmentTeam = 5573CJTSA2;
 						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -234,8 +249,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B031C93B1DD40489000FAA1F /* Secrets.plist in Resources */,
 				B064EB351DCD1EC4009284AE /* Main.storyboard in Resources */,
-				B064EB331DCD1105009284AE /* Secrets.plist in Resources */,
 				B092D6451DC7B5C2005AF3CB /* LaunchScreen.storyboard in Resources */,
 				B092D6421DC7B5C2005AF3CB /* Assets.xcassets in Resources */,
 			);
@@ -305,11 +320,13 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				DEVELOPMENT_TEAM = 2S6N6D8KFE;
+				CODE_SIGN_ENTITLEMENTS = share/share.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 5573CJTSA2;
 				INFOPLIST_FILE = share/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cale.star-on-github.share";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.newmancale.github-star.share";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -323,11 +340,13 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				DEVELOPMENT_TEAM = 2S6N6D8KFE;
+				CODE_SIGN_ENTITLEMENTS = share/share.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 5573CJTSA2;
 				INFOPLIST_FILE = share/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cale.star-on-github.share";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.newmancale.github-star.share";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -427,10 +446,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2S6N6D8KFE;
+				CODE_SIGN_ENTITLEMENTS = "star-on-github/star-on-github.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 5573CJTSA2;
 				INFOPLIST_FILE = "star-on-github/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cale.star-on-github";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.newmancale.github-star";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -441,10 +463,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2S6N6D8KFE;
+				CODE_SIGN_ENTITLEMENTS = "star-on-github/star-on-github.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 5573CJTSA2;
 				INFOPLIST_FILE = "star-on-github/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cale.star-on-github";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.newmancale.github-star";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -460,6 +485,7 @@
 				B02B28B01DD25C280025610F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B092D6321DC7B5C2005AF3CB /* Build configuration list for PBXProject "star-on-github" */ = {
 			isa = XCConfigurationList;

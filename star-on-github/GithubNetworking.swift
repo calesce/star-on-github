@@ -40,6 +40,11 @@ class GithubNetworking {
                 UserDefaults.standard.setValue(accessToken, forKey: ACCESS_TOKEN_KEY)
                 UserDefaults.standard.setValue(authId, forKey: AUTHORIZATION_ID_KEY)
                 UserDefaults.standard.setValue(fingerprint, forKey: AUTHORIZATION_ID_KEY)
+                
+                if let sharedDefaults = UserDefaults.init(suiteName: APP_GROUP_NAME) {
+                    sharedDefaults.set(accessToken, forKey: ACCESS_TOKEN_KEY)
+                }
+                
                 return completion(accessToken, authId)
             }
             if let oldToken = UserDefaults.standard.string(forKey: ACCESS_TOKEN_KEY) {
