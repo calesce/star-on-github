@@ -24,48 +24,52 @@ class ShareViewController: UIViewController {
             else {
                 return self.closeExtension()
             }
-            for itemProvider in attachments {
+            for (index, itemProvider) in attachments.enumerated() {
                 guard let itemProvider = itemProvider as? NSItemProvider
                 else {
                     return self.closeExtension()
                 }
+                let isLastItem = index == attachments.count - 1
+
                 if itemProvider.hasItemConformingToTypeIdentifier(kUTTypeURL as String) {
-                    return self.handleUrlAttachment(itemProvider: itemProvider)
+                    self.handleUrlAttachment(itemProvider: itemProvider, isLastItem: isLastItem)
                 } else if itemProvider.hasItemConformingToTypeIdentifier(kUTTypeText as String) {
-                    return self.handleTextAttachment(itemProvider: itemProvider)
-                } else {
+                    self.handleTextAttachment(itemProvider: itemProvider, isLastItem: isLastItem)
+                } else if isLastItem {
                     self.closeExtension()
                 }
             }
         }
     }
 
-    func handleUrlAttachment(itemProvider: NSItemProvider) {
+    func handleUrlAttachment(itemProvider: NSItemProvider, isLastItem: Bool) {
         itemProvider.loadItem(forTypeIdentifier: kUTTypeURL as String, options: nil) {
             result, error in
             guard let url = result as? URL
             else {
                 print("\(error)")
-                return self.closeExtension()
+                if isLastItem { self.closeExtension() }
+                return
             }
-            self.attemptToStarWithUrl(url: url)
+            self.attemptToStarWithUrl(url: url, isLastItem: isLastItem)
         }
     }
 
-    func handleTextAttachment(itemProvider: NSItemProvider) {
+    func handleTextAttachment(itemProvider: NSItemProvider, isLastItem: Bool) {
         itemProvider.loadItem(forTypeIdentifier: kUTTypeText as String, options: nil) {
             result, error in
             guard let urlString = result as? String,
                 let url = URL(string: urlString)
             else {
                 print("\(error)")
-                return self.closeExtension()
+                if isLastItem { self.closeExtension() }
+                return
             }
-            self.attemptToStarWithUrl(url: url)
+            self.attemptToStarWithUrl(url: url, isLastItem: isLastItem)
         }
     }
 
-    func attemptToStarWithUrl(url: URL) {
+    func attemptToStarWithUrl(url: URL, isLastItem: Bool) {
         self.getExpandedUrl(url: url) {
             fullUrl in
             if let fullUrl = fullUrl,
@@ -80,8 +84,9 @@ class ShareViewController: UIViewController {
                     self.closeExtension()
                 }
                 return
+            } else if isLastItem {
+                self.closeExtension()
             }
-            self.closeExtension()
         }
     }
 
