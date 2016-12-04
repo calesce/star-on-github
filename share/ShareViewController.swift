@@ -29,16 +29,39 @@ class ShareViewController: UIViewController {
                 else {
                     return self.closeExtension()
                 }
-                itemProvider.loadItem(forTypeIdentifier: kUTTypeURL as String, options: nil) {
-                    result, error in
-                    if let url = result as? URL {
-                        self.attemptToStarWithUrl(url: url)
-                    } else {
-                        print("\(error)")
-                        self.closeExtension()
-                    }
+                if itemProvider.hasItemConformingToTypeIdentifier(kUTTypeURL as String) {
+                    return self.handleUrlAttachment(itemProvider: itemProvider)
+                } else if itemProvider.hasItemConformingToTypeIdentifier(kUTTypeText as String) {
+                    return self.handleTextAttachment(itemProvider: itemProvider)
+                } else {
+                    self.closeExtension()
                 }
             }
+        }
+    }
+
+    func handleUrlAttachment(itemProvider: NSItemProvider) {
+        itemProvider.loadItem(forTypeIdentifier: kUTTypeURL as String, options: nil) {
+            result, error in
+            guard let url = result as? URL
+            else {
+                print("\(error)")
+                return self.closeExtension()
+            }
+            self.attemptToStarWithUrl(url: url)
+        }
+    }
+
+    func handleTextAttachment(itemProvider: NSItemProvider) {
+        itemProvider.loadItem(forTypeIdentifier: kUTTypeText as String, options: nil) {
+            result, error in
+            guard let urlString = result as? String,
+                let url = URL(string: urlString)
+            else {
+                print("\(error)")
+                return self.closeExtension()
+            }
+            self.attemptToStarWithUrl(url: url)
         }
     }
 
