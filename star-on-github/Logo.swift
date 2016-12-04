@@ -12,7 +12,7 @@ class Logo: UIView {
     override func draw(_ rect: CGRect) {
         let strokeColor = UIColor(red: 0.071, green: 0.200, blue: 0.289, alpha: 1.000)
         let fillColor = UIColor(red: 0.071, green: 0.200, blue: 0.289, alpha: 1.000)
-        
+
         //// Star Drawing
         let starPath = UIBezierPath()
         starPath.move(to: CGPoint(x: 115, y: 45))

@@ -12,27 +12,25 @@ import Security
 class Keychain {
     static let KeychainAccount = "last user"
     static let KeychainErrorDomain = Bundle.main.bundleIdentifier ?? ""
-    
+
     static func saveData(data: [String: NSCoding], userAccount: String) -> NSError? {
         return nil
     }
-    
+
     static func loadData(userAccount: String) {
-        
     }
-    
+
     static func deleteData() {
-        
     }
-    
+
     private static func createAttributes(userAccount: String) -> NSMutableDictionary {
         let attributes = NSMutableDictionary()
-        
+
         attributes.setObject(userAccount, forKey: kSecAttrAccount as NSString)
         attributes.setObject(userAccount, forKey: kSecAttrAccessGroup as NSString)
         attributes.setObject(userAccount, forKey: kSecAttrService as NSString)
         attributes.setObject(userAccount, forKey: kSecClass as NSString)
-        
+
         return attributes
     }
 }

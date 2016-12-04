@@ -17,10 +17,10 @@ class ShareViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let context = self.extensionContext!
-        
+
         for item in context.inputItems {
             guard let item = item as? NSExtensionItem,
-            let attachments = item.attachments
+                let attachments = item.attachments
             else {
                 return self.closeExtension()
             }
@@ -30,7 +30,7 @@ class ShareViewController: UIViewController {
                     return self.closeExtension()
                 }
                 itemProvider.loadItem(forTypeIdentifier: kUTTypeURL as String, options: nil) {
-                    (result, error) in
+                    result, error in
                     if let url = result as? URL {
                         self.attemptToStarWithUrl(url: url)
                     } else {
@@ -64,7 +64,7 @@ class ShareViewController: UIViewController {
 
     func getExpandedUrl(url: URL, completion: @escaping (URL?) -> Void) {
         let task = URLSession.shared.dataTask(with: url) {
-            (data, response, error) in
+            data, response, error in
             if let resp = response as? HTTPURLResponse {
                 return completion(resp.url)
             }
@@ -75,7 +75,7 @@ class ShareViewController: UIViewController {
 
     func parseGitHubUrl(url: URL) -> [String]? {
         if let host = url.host {
-            let pathComponents = url.path.characters.split{$0 == "/"}.map(String.init)
+            let pathComponents = url.path.characters.split { $0 == "/" }.map(String.init)
             return (host == "github.com" && pathComponents.count > 1) ? pathComponents : nil
         }
         return nil
@@ -91,7 +91,7 @@ class ShareViewController: UIViewController {
         let request = NSMutableURLRequest(url: githubUrl!)
         request.httpMethod = "PUT"
 
-        let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, resp, err) in
+        let task = URLSession.shared.dataTask(with: request as URLRequest) { data, resp, err in
             guard let response = resp as? HTTPURLResponse
             else {
                 return completion(false)

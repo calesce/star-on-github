@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    
+
     var authorizationId: Int?
     var token: String?
 
@@ -27,18 +27,18 @@ class LoginViewController: UIViewController {
         else {
             return
         }
-        
+
         self.token = token
         self.authorizationId = UserDefaults.standard.integer(forKey: AUTHORIZATION_ID_KEY)
-        
+
         super.viewDidLoad()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         self.usernameField.text = ""
         self.passwordField.text = ""
     }
-    
+
     @IBAction func handleLogin(_ sender: Any) {
         let username = usernameField.text ?? ""
         let password = passwordField.text ?? ""
@@ -50,16 +50,16 @@ class LoginViewController: UIViewController {
             showAlert(title: "Password required")
             return
         }
-        
+
         GithubNetworking.authenticateWithGitHub(
             username: username,
             password: password,
             fingerprint: getExistingFingerprintOrRandom()
         ) {
-            (token, authId) in
+            token, authId in
             self.token = token
             self.authorizationId = authId
-            
+
             DispatchQueue.main.async {
                 if token != nil {
                     self.performSegue(withIdentifier: "loginSegue", sender: sender)
@@ -70,29 +70,29 @@ class LoginViewController: UIViewController {
             }
         }
     }
-    
+
     func randomFingerprint() -> String {
-        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let letters: NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         let len = UInt32(letters.length)
-        
+
         var randomString = ""
-        
+
         for _ in 0 ..< 16 {
             let rand = arc4random_uniform(len)
             var nextChar = letters.character(at: Int(rand))
             randomString += NSString(characters: &nextChar, length: 1) as String
         }
-        
+
         return randomString
     }
-    
+
     func getExistingFingerprintOrRandom() -> String {
         if let fingerprint = UserDefaults.standard.string(forKey: FINGERPRINT_KEY) {
             return fingerprint
         }
         return randomFingerprint()
     }
-    
+
     func showAlert(title: String) {
         let alertController = UIAlertController(title: title, message: nil, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -100,7 +100,7 @@ class LoginViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let navigationController = segue.destination as? UINavigationController, 
+        if let navigationController = segue.destination as? UINavigationController,
             let starredRepositoriesVc = navigationController.viewControllers.first as? StarredRepositoriesViewController {
             starredRepositoriesVc.token = self.token
             starredRepositoriesVc.authorizationId = self.authorizationId

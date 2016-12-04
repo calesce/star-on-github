@@ -27,10 +27,10 @@ enum Language: String {
     case EmacsLisp = "Emacs Lisp"
     case ObjectiveC = "Objective-C"
     case None
-    
+
     // https://github.com/ozh/github-colors/blob/master/colors.json
     var hexCode: String {
-        switch self{
+        switch self {
         case .JavaScript:
             return "#f1e05a"
         case .Swift:

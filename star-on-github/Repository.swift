@@ -24,14 +24,14 @@ extension Repository {
         else {
             return nil
         }
-        
+
         if let languageString = json["language"] as? String,
             let language = Language(rawValue: languageString) {
             self.language = language
         } else {
             self.language = Language.None
         }
-         
+
         self.owner = ownerName
         self.name = name
         self.stargazers = stargazers
