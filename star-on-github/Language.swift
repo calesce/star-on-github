@@ -26,6 +26,19 @@ enum Language: String {
     case Go = "Go"
     case EmacsLisp = "Emacs Lisp"
     case ObjectiveC = "Objective-C"
+    case HTML = "HTML"
+    case JupyterNotebook = "Jupyter Notebook"
+    case R = "R"
+    case VimL = "VimL"
+    case Perl = "Perl"
+    case CoffeeScript = "CoffeeScript"
+    case TeX = "TeX"
+    case Scala = "Scala"
+    case Haskell = "Haskell"
+    case Lua = "Lua"
+    case Clojure = "Clojure"
+    case Matlab = "Matlab"
+    case OCaml = "OCaml"
     case None
 
     // https://github.com/ozh/github-colors/blob/master/colors.json
@@ -63,6 +76,32 @@ enum Language: String {
             return "#c065db"
         case .ObjectiveC:
             return "#438eff"
+        case .HTML:
+            return "#e44b23"
+        case .JupyterNotebook:
+            return "#DA5B0B"
+        case .R:
+            return "#198CE7"
+        case .VimL:
+            return "#199f4b"
+        case .Perl:
+            return "#0298c3"
+        case .CoffeeScript:
+            return "#244776"
+        case .TeX:
+            return "#3D6117"
+        case .Scala:
+            return "#c22d40"
+        case .Haskell:
+            return "#29b544"
+        case .Lua:
+            return "#000080"
+        case .Clojure:
+            return "#db5855"
+        case .Matlab:
+            return "#bb92ac"
+        case .OCaml:
+            return "#3be133"
         case .None:
             return "#d3d3d3"
         }
